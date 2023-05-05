@@ -1,0 +1,17 @@
+div {
+  border-radius: 10px;
+  padding: 20px;
+}
+
+h2, p {
+  background-color: #00FF7F;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+img {
+  border-radius: 10px;
+  background-color: #00FF7F;
+  padding: 10px;
+}
+

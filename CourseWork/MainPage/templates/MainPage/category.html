@@ -1,0 +1,37 @@
+{% extends 'MainPage/base.html' %}
+
+{% block title %}
+Категорії
+{% endblock %}
+
+{% block text %}
+<style>
+h1 {
+color: lime;
+font-size: 40px;
+}
+p {
+color: lime;
+}
+.btn {
+background-color: lime;
+color: white;
+padding: 10px 20px;
+border-radius: 5px;
+font-size: 16px;
+}
+</style>
+<h1>Категорії</h1>
+<p>У розділі категорій будуть показуватися категорії інформації на сайті</p>
+{% endblock %}
+{% block content %}
+<button class="btn"><a href="http://127.0.0.1:8000/category1" target="_self">Виведення данних в консоль</a></button>
+<button class="btn"><a href="http://127.0.0.1:8000/category2" target="_self">Введення данних користувачем</a></button>
+<button class="btn"><a href="http://127.0.0.1:8000/category3" target="_self">Робота з змінними обєктами</a></button>
+<button class="btn"><a href="http://127.0.0.1:8000/category4" target="_self">Керування потоком виконання програми</a></button>
+<button class="btn"><a href="http://127.0.0.1:8000/category5" target="_self">Робота з функціями та класами</a></button>
+<button class="btn"><a href="http://127.0.0.1:8000/category6" target="_self">Обробка помилок</a></button>
+<button class="btn"><a href="http://127.0.0.1:8000/category7" target="_self">Робота з файлами та директоріями</a></button>
+<button class="btn"><a href="http://127.0.0.1:8000/category8" target="_self">Робота з іншими модулями та бібліотеками</a></button>
+<button class="btn"><a href="http://127.0.0.1:8000/category9" target="_self">Інше</a></button>
+{% endblock %}

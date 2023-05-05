@@ -1,0 +1,26 @@
+{% extends 'MainPage/base.html' %}
+
+{% block title %}
+Обробка помилок Python
+{% endblock %}
+
+{% block text %}
+{% endblock %}
+{% block content %}
+<link rel="stylesheet" type="text/css" href="/static/MainPage/css/search.css">
+<style>
+        h1 {
+            color: lime;
+            front-size: 40px;
+        }
+    </style>
+<h1>Обробка помилок Python</h1>
+     <p>Обробка помилок - це процес знаходження та вирішення помилок в програмі. Коли програма зіштовхується з помилкою, вона може зупинитися та повідомити користувачу про проблему, або спробувати автоматично вирішити проблему.</p>
+    {% for page in category1_pages %}
+        <div>
+            <h2>{{ page.title }}</h2>
+            <img src="{{ page.image.url }}" alt="{{ page.title }}">
+            <p>{{ page.content }}</p>
+        </div>
+    {% endfor %}
+{% endblock %}

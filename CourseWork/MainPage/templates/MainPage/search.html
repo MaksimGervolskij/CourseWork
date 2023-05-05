@@ -1,0 +1,37 @@
+{% extends 'MainPage/base.html' %}
+
+
+{% block content %}
+    <link rel="stylesheet" type="text/css" href="/static/MainPage/css/search.css">
+    {% for result in results %}
+        <div>
+            <h2>{{ result.title }}</h2>
+            <img src="{{ result.image.url }}" alt="{{ result.title }}">
+            <p>{{ result.content }}</p>
+        </div>
+    {% empty %}
+    <style>
+    button {
+    background-color: lime;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    button a {
+    text-decoration: none;
+    color: 	#000000;
+    }
+</style>
+        <div style="color: #0000FF; font-size: 30px;">
+            <p>Нажаль такого результату не знайдено</p>
+            <p>Такої теми або нема, або сторінка про неї ще не була додана в нашу базу
+                данних. Ви можете повернутися назад на головну сторінку, щоб спробувати скористатися
+            пошуком ще раз, або пошукати те що може знадобитися серед категорій.</p>
+            <button><a href="http://127.0.0.1:8000/category" target="_self">категорії</a></button>
+             <button><a href="http://127.0.0.1:8000/" target="_self">Головна сторінка</a></button>
+        </div>
+    {% endfor %}
+{% endblock %}

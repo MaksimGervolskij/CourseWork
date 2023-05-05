@@ -1,0 +1,84 @@
+{% extends 'MainPage/base.html' %}
+
+{% block title %}
+Головна сторінка
+{% endblock %}
+
+{% block text %}
+    <style>
+    button {
+    background-color: lime;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    button a {
+    text-decoration: none;
+    color: 	#000000;
+    }
+</style>
+    <button><a href="http://127.0.0.1:8000/category" target="_self">категорії</a></button>
+    <button><a href="http://127.0.0.1:8000/news" target="_self">новини</a></button>
+    <button><a href="http://127.0.0.1:8000/home" target="_self">про сайт</a></button>
+    <div style="text-align: right;">
+        <style>
+    .search-form {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .search-form input[type="text"] {
+        width: 25%;
+        padding: 10px;
+        border: 1px solid black;
+        border-radius: 20px;
+        margin-right: -1px;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        text-align: right;
+    }
+
+    .search-form button[type="submit"] {
+        padding: 10px 20px;
+        background-color: lime;
+        border: 1px solid black;
+        border-radius: 20px;
+        border-left: none;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        cursor: pointer;
+    }
+
+    .search-form button[type="submit"]:hover {
+        background-color: darkgreen;
+        color: white;
+    }
+</style>
+
+        <form class="search-form" action="{% url 'search' %}" method="GET">
+        <input type="text" name="q" placeholder="Search...">
+        <button type="submit">Search</button>
+        </form>
+    </div>
+    <style>
+        h1 {
+            color: lime;
+            front-size: 40px;
+        }
+    </style>
+    <h1>PythonHelpUAguid</h1>
+    <style>
+        p {
+            color: lime;
+        }
+    </style>
+    <p>Ви можете спробувати знайти необхідну вам інформацію про Python через категорії та строку пошуку</p>
+{% endblock %}
+{% block number %}
+    <div id="sfc7ws2r2mpeqxlag4z674slbapj26b2999"></div>
+<script type="text/javascript" src="https://counter2.optistats.ovh/private/counter.js?c=7ws2r2mpeqxlag4z674slbapj26b2999&down=async" async></script>
+<noscript><a href="https://www.freecounterstat.com" title="website counters"><img src="https://counter2.optistats.ovh/private/freecounterstat.php?c=7ws2r2mpeqxlag4z674slbapj26b2999" border="0" title="website counters" alt="website counters"></a></noscript>
+{% endblock %}

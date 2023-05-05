@@ -1,0 +1,36 @@
+{% extends 'MainPage/base.html' %}
+
+{% block title %}
+Новини сайту
+{% endblock %}
+
+{% block text %}
+    <style>
+        h1 {
+            color: lime;
+            front-size: 40px;
+        }
+    </style>
+    <h1>Новини</h1>
+    <style>
+        p {
+            color: lime;
+        }
+    </style>
+    <p>У розділі новин будуть показуватися новини сайту</p>
+{% endblock %}
+{% block content %}
+    <div class="posts-wrapper">
+    <h1>Список новин:</h1>
+    {% for post in posts %}
+        <div class="post">
+            <h2>{{ post.title }}</h2>
+            <p>{{ post.text }}</p>
+            {% if post.image %}
+                <img src="{{ post.image.url }}" alt="{{ post.title }}" class="post-image">
+            {% endif %}
+            <p class="date">Published: {{ post.pub_date }}</p>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends 'MainPage/base.html' %}
+
+{% block title %}
+Виведення данних в консоль
+{% endblock %}
+
+{% block text %}
+{% endblock %}
+{% block content %}
+<link rel="stylesheet" type="text/css" href="/static/MainPage/css/search.css">
+<style>
+        h1 {
+            color: lime;
+            front-size: 40px;
+        }
+    </style>
+<h1>Виведення данних в консоль</h1>
+     <p>Виведення даних в консоль є одним з найпоширеніших способів виведення результатів роботи програми на екран. Для виведення даних в консоль у більшості мов програмування використовують функцію "print()". </p>
+    {% for page in category1_pages %}
+        <div>
+            <h2>{{ page.title }}</h2>
+            <img src="{{ page.image.url }}" alt="{{ page.title }}">
+            <p>{{ page.content }}</p>
+        </div>
+    {% endfor %}
+{% endblock %}

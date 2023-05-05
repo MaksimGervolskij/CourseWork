@@ -1,0 +1,86 @@
+{% extends 'MainPage/base.html' %}
+
+{% block title %}
+про PythonHelpUAguid
+{% endblock %}
+
+{% block text %}
+<style>
+        h1 {
+            color: lime;
+            front-size: 40px;
+        }
+    </style>
+    <h1>про PythonHelpUAguid</h1>
+<style>
+        p {
+            color: ;
+        }
+    </style>
+    <div style="background-color: rgba(255,255,255,0.5); padding: 20px;">
+  <p>Сайт розроблений для виконання курсової роботи з таких курсів як "Інформаційні системи та технології" та "Інформатика та комп'ютерна техніка" студентом Сумського Національного Аграрного Університету групи ІСТ-2201 Гервольським Максимом. Сайт зроблений за допомогою фраймворка Django для мови програмування python, з використанням системи управління базами даних mysql. Сайт має мету допомогти новим користувачам Python</p>
+</div>
+{% endblock %}
+{% block number %}
+    <button onclick="myFunction()">Зворотній зв'язок</button>
+
+<div id="myModal" class="modal">
+    <style>.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Ширина вікна */
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+ </style>
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Email: maksimgervolskij@gmail.com</p>
+    <p>Viber: +380661605693</p>
+  </div>
+</div>
+
+<script>
+function myFunction() {
+  var modal = document.getElementById("myModal");
+  var span = document.getElementsByClassName("close")[0];
+  modal.style.display = "block";
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+}
+</script>
+
+{% endblock %}

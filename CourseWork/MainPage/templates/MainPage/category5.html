@@ -1,0 +1,26 @@
+{% extends 'MainPage/base.html' %}
+
+{% block title %}
+Робота з функціями та класами
+{% endblock %}
+
+{% block text %}
+{% endblock %}
+{% block content %}
+<link rel="stylesheet" type="text/css" href="/static/MainPage/css/search.css">
+<style>
+        h1 {
+            color: lime;
+            front-size: 40px;
+        }
+    </style>
+<h1>Робота з функціями та класами</h1>
+     <p>Робота з функціями та класами є ключовою складовою розробки програм на мові Python. Функції дозволяють групувати певний фрагмент коду, який можна використовувати багато разів у програмі, а класи дають можливість об'єднувати в собі функції та дані, що відносяться до певної області застосування.</p>
+    {% for page in category1_pages %}
+        <div>
+            <h2>{{ page.title }}</h2>
+            <img src="{{ page.image.url }}" alt="{{ page.title }}">
+            <p>{{ page.content }}</p>
+        </div>
+    {% endfor %}
+{% endblock %}

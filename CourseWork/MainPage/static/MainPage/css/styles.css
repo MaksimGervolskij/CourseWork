@@ -1,0 +1,8 @@
+body {
+    background-image: url('/static/MainPage/img/0_QvMi-5jnCXG8U8vl.jpg') ;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+form input[type="text"] {
+  float: right;
+}
